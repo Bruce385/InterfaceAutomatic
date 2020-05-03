@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="OkHttp Test" parallel="false">
+    <test name="公共模块">
+        <classes>
+            <class name="cyc.testng.cases.WeatherCases"/>
+        </classes>
+    </test>
+</suite>
