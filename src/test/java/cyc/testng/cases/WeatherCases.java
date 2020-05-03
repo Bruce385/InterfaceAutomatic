@@ -23,10 +23,10 @@ public class WeatherCases {
         Response response = HttpUtils.call(Methods.GET, Weather.BASE_URL, cityCode + Weather.SUFFIX);
         //System.out.println(response.code() + "\n" + response.headers() + "\n" + response.body().string());
         String jsonString = response.body().string();
-        System.out.println(jsonString);
+        //System.out.println(jsonString);
         String weatherInfo = JsonParse.getJsonValue(jsonString, "weatherinfo");
         String city = JsonParse.getJsonValue(weatherInfo, "city");
-        System.out.println("用例结果: resultCode=>expected: " + cityName + " ,actual: " + city);
+        //System.out.println("用例结果: resultCode=>expected: " + cityName + " ,actual: " + city);
         Assert.assertEquals(city, cityName);
     }
 

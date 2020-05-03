@@ -6,6 +6,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.entity.StringEntity;
 
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 /**
@@ -33,8 +34,10 @@ public class HttpRequests {
                 break;
             case POST:
                 HttpPost post = new HttpPost(url);
+                post.setHeader("Content-Type", "application/x-www-form-urlencoded");
                 StringEntity entity = null;
                 try {
+                    //System.out.println(params);
                     entity = new StringEntity(params, "utf-8");
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
