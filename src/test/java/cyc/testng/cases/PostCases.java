@@ -9,8 +9,6 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
-import org.json.JSONObject;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -20,7 +18,6 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Locale;
 import java.util.ResourceBundle;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
 
 /**
  * @author Bruce.Chen
